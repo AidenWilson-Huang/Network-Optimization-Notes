@@ -109,12 +109,12 @@ WireShark是非常流行的网络封包分析工具，可以截取各种网络�
 
 先介绍一个使用wireshark工具抓取ping命令操作的示例，让读者可以先上手操作感受一下抓包的具体过程。
 1、打开wireshark 2.6.5，主界面如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124120704182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
+！[](https://img-blog.csdnimg.cn/20210124120704182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
 2、选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进行捕获该网络信息，开始抓取网络包
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124120915674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)3、执行需要抓包的操作，如ping www.baidu.com。
+![](https://img-blog.csdnimg.cn/20210124120915674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)3、执行需要抓包的操作，如ping www.baidu.com。
 4、操作完成后相关数据包就抓取到了。为避免其他无用的数据包影响分析，可以通过在过滤栏设置过滤条件进行数据包列表过滤，获取结果如下。
 说明：ip.addr == 180.101.49.11 and icmp 表示只显示ICPM协议且源主机IP或者目的主机IP为119.75.217.26的数据包。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124124007777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124124035735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210124124007777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124124035735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
 5、wireshark抓包完成，就这么简单。关于wireshark过滤条件和如何查看数据包中的详细内容在后面介绍。
 
 ### WireShark抓包界面
@@ -138,12 +138,12 @@ WireShark是非常流行的网络封包分析工具，可以截取各种网络�
 （4）Transmission Control Protocol: 传输层T的数据段头部信息，此处是TCP
 
 （5）Hypertext Transfer Protocol: 应用层的信息，此处是HTTP协议
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124124801282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210124124801282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
 
 ### TCP包的具体内容
 
 从下图可以看到wireshark捕获到的TCP包中的每个字段。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210124124945729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210124124945729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p6d3doaHBw,size_16,color_FFFFFF,t_70)
 
 4. Dissector Pane(数据包字节区)。
 
